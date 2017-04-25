@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C13126C1EA99DDA0052CC89 /* CustomerServiceCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C13126B1EA99DDA0052CC89 /* CustomerServiceCenterViewController.m */; };
+		8C13126F1EA99E450052CC89 /* EnterpriseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C13126E1EA99E450052CC89 /* EnterpriseViewController.m */; };
+		8C1312721EA99E8B0052CC89 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1312711EA99E8B0052CC89 /* HomePageViewController.m */; };
+		8C1312751EA99EFF0052CC89 /* MaintainRightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1312741EA99EFF0052CC89 /* MaintainRightsViewController.m */; };
+		8C1312781EA99F400052CC89 /* MyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1312771EA99F400052CC89 /* MyCenterViewController.m */; };
+		8C13127C1EA9A1380052CC89 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C13127B1EA9A1380052CC89 /* CustomTabBarController.m */; };
+		8C1312801EA9DE530052CC89 /* ConfigUnivasal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C13127F1EA9DE530052CC89 /* ConfigUnivasal.m */; };
 		8C2C23411EA8556300D96B6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23401EA8556300D96B6F /* main.m */; };
 		8C2C23441EA8556300D96B6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23431EA8556300D96B6F /* AppDelegate.m */; };
 		8C2C23471EA8556300D96B6F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23461EA8556300D96B6F /* ViewController.m */; };
@@ -15,6 +22,11 @@
 		8C2C234F1EA8556300D96B6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C2C234D1EA8556300D96B6F /* LaunchScreen.storyboard */; };
 		8C2C235A1EA8556300D96B6F /* VehicleRepairNetProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23591EA8556300D96B6F /* VehicleRepairNetProTests.m */; };
 		8C2C23651EA8556300D96B6F /* VehicleRepairNetProUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23641EA8556300D96B6F /* VehicleRepairNetProUITests.m */; };
+		8C2C23771EA8615500D96B6F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23761EA8615500D96B6F /* BaseViewController.m */; };
+		8C2C237B1EA861B600D96B6F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C237A1EA861B600D96B6F /* BaseTableViewController.m */; };
+		ABD66849D3E6552967AC83F7 /* libPods-VehicleRepairNetProUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AE57675B872123AE89C9E /* libPods-VehicleRepairNetProUITests.a */; };
+		B97101FCA828B2A75A1DE428 /* libPods-VehicleRepairNetProTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 722E2BFF7EF006FC857350BD /* libPods-VehicleRepairNetProTests.a */; };
+		E7F148CFFCA22DC4CC3C5F00 /* libPods-VehicleRepairNetPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FC446192657FEE36374962 /* libPods-VehicleRepairNetPro.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +47,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25FC446192657FEE36374962 /* libPods-VehicleRepairNetPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VehicleRepairNetPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2927B2329AF42932D90FF987 /* Pods-VehicleRepairNetProTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRepairNetProTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleRepairNetProTests/Pods-VehicleRepairNetProTests.debug.xcconfig"; sourceTree = "<group>"; };
+		722E2BFF7EF006FC857350BD /* libPods-VehicleRepairNetProTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VehicleRepairNetProTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7BADBC205C6E8EF34BB427 /* Pods-VehicleRepairNetProUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRepairNetProUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleRepairNetProUITests/Pods-VehicleRepairNetProUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7CEF291A3E8C1AADEF0FA377 /* Pods-VehicleRepairNetPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRepairNetPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleRepairNetPro/Pods-VehicleRepairNetPro.debug.xcconfig"; sourceTree = "<group>"; };
+		816557B71F41A522DD63741A /* Pods-VehicleRepairNetPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRepairNetPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleRepairNetPro/Pods-VehicleRepairNetPro.release.xcconfig"; sourceTree = "<group>"; };
+		8C13126A1EA99DDA0052CC89 /* CustomerServiceCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerServiceCenterViewController.h; sourceTree = "<group>"; };
+		8C13126B1EA99DDA0052CC89 /* CustomerServiceCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerServiceCenterViewController.m; sourceTree = "<group>"; };
+		8C13126D1EA99E450052CC89 /* EnterpriseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterpriseViewController.h; sourceTree = "<group>"; };
+		8C13126E1EA99E450052CC89 /* EnterpriseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterpriseViewController.m; sourceTree = "<group>"; };
+		8C1312701EA99E8B0052CC89 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		8C1312711EA99E8B0052CC89 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		8C1312731EA99EFF0052CC89 /* MaintainRightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaintainRightsViewController.h; sourceTree = "<group>"; };
+		8C1312741EA99EFF0052CC89 /* MaintainRightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaintainRightsViewController.m; sourceTree = "<group>"; };
+		8C1312761EA99F400052CC89 /* MyCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCenterViewController.h; sourceTree = "<group>"; };
+		8C1312771EA99F400052CC89 /* MyCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCenterViewController.m; sourceTree = "<group>"; };
+		8C13127A1EA9A1380052CC89 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarController.h; sourceTree = "<group>"; };
+		8C13127B1EA9A1380052CC89 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarController.m; sourceTree = "<group>"; };
+		8C13127E1EA9DE530052CC89 /* ConfigUnivasal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigUnivasal.h; sourceTree = "<group>"; };
+		8C13127F1EA9DE530052CC89 /* ConfigUnivasal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigUnivasal.m; sourceTree = "<group>"; };
+		8C1312811EA9E7C50052CC89 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8C2C233C1EA8556300D96B6F /* VehicleRepairNetPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleRepairNetPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2C23401EA8556300D96B6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C2C23421EA8556300D96B6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +84,13 @@
 		8C2C23601EA8556300D96B6F /* VehicleRepairNetProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VehicleRepairNetProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2C23641EA8556300D96B6F /* VehicleRepairNetProUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VehicleRepairNetProUITests.m; sourceTree = "<group>"; };
 		8C2C23661EA8556300D96B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C2C23751EA8615500D96B6F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8C2C23761EA8615500D96B6F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8C2C23791EA861B600D96B6F /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		8C2C237A1EA861B600D96B6F /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		93C9B617C1FBD721D15AAA60 /* Pods-VehicleRepairNetProTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRepairNetProTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleRepairNetProTests/Pods-VehicleRepairNetProTests.release.xcconfig"; sourceTree = "<group>"; };
+		AE9945FF9D57D3CACBA19EC2 /* Pods-VehicleRepairNetProUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRepairNetProUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleRepairNetProUITests/Pods-VehicleRepairNetProUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FA1AE57675B872123AE89C9E /* libPods-VehicleRepairNetProUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VehicleRepairNetProUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F148CFFCA22DC4CC3C5F00 /* libPods-VehicleRepairNetPro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97101FCA828B2A75A1DE428 /* libPods-VehicleRepairNetProTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +114,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD66849D3E6552967AC83F7 /* libPods-VehicleRepairNetProUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F50AEE0CD6D786B1A45CFB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CEF291A3E8C1AADEF0FA377 /* Pods-VehicleRepairNetPro.debug.xcconfig */,
+				816557B71F41A522DD63741A /* Pods-VehicleRepairNetPro.release.xcconfig */,
+				2927B2329AF42932D90FF987 /* Pods-VehicleRepairNetProTests.debug.xcconfig */,
+				93C9B617C1FBD721D15AAA60 /* Pods-VehicleRepairNetProTests.release.xcconfig */,
+				7B7BADBC205C6E8EF34BB427 /* Pods-VehicleRepairNetProUITests.debug.xcconfig */,
+				AE9945FF9D57D3CACBA19EC2 /* Pods-VehicleRepairNetProUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7B623DB33A180DEABC5E8C02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25FC446192657FEE36374962 /* libPods-VehicleRepairNetPro.a */,
+				722E2BFF7EF006FC857350BD /* libPods-VehicleRepairNetProTests.a */,
+				FA1AE57675B872123AE89C9E /* libPods-VehicleRepairNetProUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C1312661EA99D5B0052CC89 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				8C1312761EA99F400052CC89 /* MyCenterViewController.h */,
+				8C1312771EA99F400052CC89 /* MyCenterViewController.m */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
+		8C1312671EA99D670052CC89 /* 我要维权 */ = {
+			isa = PBXGroup;
+			children = (
+				8C1312731EA99EFF0052CC89 /* MaintainRightsViewController.h */,
+				8C1312741EA99EFF0052CC89 /* MaintainRightsViewController.m */,
+			);
+			name = "我要维权";
+			sourceTree = "<group>";
+		};
+		8C1312681EA99D710052CC89 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				8C1312701EA99E8B0052CC89 /* HomePageViewController.h */,
+				8C1312711EA99E8B0052CC89 /* HomePageViewController.m */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		8C1312691EA99D790052CC89 /* 企业查询 */ = {
+			isa = PBXGroup;
+			children = (
+				8C13126D1EA99E450052CC89 /* EnterpriseViewController.h */,
+				8C13126E1EA99E450052CC89 /* EnterpriseViewController.m */,
+			);
+			name = "企业查询";
+			sourceTree = "<group>";
+		};
+		8C1312791EA9A09D0052CC89 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8C13127A1EA9A1380052CC89 /* CustomTabBarController.h */,
+				8C13127B1EA9A1380052CC89 /* CustomTabBarController.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		8C13127D1EA9DDF30052CC89 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				8C13127E1EA9DE530052CC89 /* ConfigUnivasal.h */,
+				8C13127F1EA9DE530052CC89 /* ConfigUnivasal.m */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
 		8C2C23331EA8556300D96B6F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +205,8 @@
 				8C2C23581EA8556300D96B6F /* VehicleRepairNetProTests */,
 				8C2C23631EA8556300D96B6F /* VehicleRepairNetProUITests */,
 				8C2C233D1EA8556300D96B6F /* Products */,
+				5F50AEE0CD6D786B1A45CFB7 /* Pods */,
+				7B623DB33A180DEABC5E8C02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +223,11 @@
 		8C2C233E1EA8556300D96B6F /* VehicleRepairNetPro */ = {
 			isa = PBXGroup;
 			children = (
-				8C2C23421EA8556300D96B6F /* AppDelegate.h */,
-				8C2C23431EA8556300D96B6F /* AppDelegate.m */,
 				8C2C23451EA8556300D96B6F /* ViewController.h */,
 				8C2C23461EA8556300D96B6F /* ViewController.m */,
-				8C2C23481EA8556300D96B6F /* Main.storyboard */,
+				8C13127D1EA9DDF30052CC89 /* config */,
+				8C2C237D1EA8B3F300D96B6F /* Controller */,
 				8C2C234B1EA8556300D96B6F /* Assets.xcassets */,
-				8C2C234D1EA8556300D96B6F /* LaunchScreen.storyboard */,
-				8C2C23501EA8556300D96B6F /* Info.plist */,
 				8C2C233F1EA8556300D96B6F /* Supporting Files */,
 			);
 			path = VehicleRepairNetPro;
@@ -117,7 +236,13 @@
 		8C2C233F1EA8556300D96B6F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8C2C23421EA8556300D96B6F /* AppDelegate.h */,
+				8C2C23431EA8556300D96B6F /* AppDelegate.m */,
+				8C2C234D1EA8556300D96B6F /* LaunchScreen.storyboard */,
+				8C2C23501EA8556300D96B6F /* Info.plist */,
+				8C2C23481EA8556300D96B6F /* Main.storyboard */,
 				8C2C23401EA8556300D96B6F /* main.m */,
+				8C1312811EA9E7C50052CC89 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +265,40 @@
 			path = VehicleRepairNetProUITests;
 			sourceTree = "<group>";
 		};
+		8C2C23781EA8617B00D96B6F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8C2C23751EA8615500D96B6F /* BaseViewController.h */,
+				8C2C23761EA8615500D96B6F /* BaseViewController.m */,
+				8C2C23791EA861B600D96B6F /* BaseTableViewController.h */,
+				8C2C237A1EA861B600D96B6F /* BaseTableViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		8C2C237D1EA8B3F300D96B6F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C1312791EA9A09D0052CC89 /* TabBar */,
+				8C2C23781EA8617B00D96B6F /* Base */,
+				8C2C23811EA8B5A000D96B6F /* 客服中心 */,
+				8C1312691EA99D790052CC89 /* 企业查询 */,
+				8C1312681EA99D710052CC89 /* 首页 */,
+				8C1312671EA99D670052CC89 /* 我要维权 */,
+				8C1312661EA99D5B0052CC89 /* 我的 */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8C2C23811EA8B5A000D96B6F /* 客服中心 */ = {
+			isa = PBXGroup;
+			children = (
+				8C13126A1EA99DDA0052CC89 /* CustomerServiceCenterViewController.h */,
+				8C13126B1EA99DDA0052CC89 /* CustomerServiceCenterViewController.m */,
+			);
+			name = "客服中心";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +306,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C2C23691EA8556300D96B6F /* Build configuration list for PBXNativeTarget "VehicleRepairNetPro" */;
 			buildPhases = (
+				3EAC55C39AAA9B67DBA15E6A /* [CP] Check Pods Manifest.lock */,
 				8C2C23381EA8556300D96B6F /* Sources */,
 				8C2C23391EA8556300D96B6F /* Frameworks */,
 				8C2C233A1EA8556300D96B6F /* Resources */,
+				192EE7D9DB348BD50EFBB8F0 /* [CP] Embed Pods Frameworks */,
+				A5FE1316EB29448CA2C00133 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +326,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C2C236C1EA8556300D96B6F /* Build configuration list for PBXNativeTarget "VehicleRepairNetProTests" */;
 			buildPhases = (
+				CD92D865694793BAEAA49B66 /* [CP] Check Pods Manifest.lock */,
 				8C2C23511EA8556300D96B6F /* Sources */,
 				8C2C23521EA8556300D96B6F /* Frameworks */,
 				8C2C23531EA8556300D96B6F /* Resources */,
+				46D1089401CD7D9DF34E5AB0 /* [CP] Embed Pods Frameworks */,
+				8DC40ECDF11FFAB58AE1B482 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +347,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C2C236F1EA8556300D96B6F /* Build configuration list for PBXNativeTarget "VehicleRepairNetProUITests" */;
 			buildPhases = (
+				300759EC195B3147CA661EC0 /* [CP] Check Pods Manifest.lock */,
 				8C2C235C1EA8556300D96B6F /* Sources */,
 				8C2C235D1EA8556300D96B6F /* Frameworks */,
 				8C2C235E1EA8556300D96B6F /* Resources */,
+				8C05A5AB5097A53CB9B5A279 /* [CP] Embed Pods Frameworks */,
+				1FE9104C1B9976328C076A8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,14 +439,161 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		192EE7D9DB348BD50EFBB8F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VehicleRepairNetPro/Pods-VehicleRepairNetPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1FE9104C1B9976328C076A8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VehicleRepairNetProUITests/Pods-VehicleRepairNetProUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		300759EC195B3147CA661EC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3EAC55C39AAA9B67DBA15E6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		46D1089401CD7D9DF34E5AB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VehicleRepairNetProTests/Pods-VehicleRepairNetProTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C05A5AB5097A53CB9B5A279 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VehicleRepairNetProUITests/Pods-VehicleRepairNetProUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DC40ECDF11FFAB58AE1B482 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VehicleRepairNetProTests/Pods-VehicleRepairNetProTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5FE1316EB29448CA2C00133 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VehicleRepairNetPro/Pods-VehicleRepairNetPro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD92D865694793BAEAA49B66 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8C2C23381EA8556300D96B6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8C2C23471EA8556300D96B6F /* ViewController.m in Sources */,
+				8C13127C1EA9A1380052CC89 /* CustomTabBarController.m in Sources */,
+				8C2C23771EA8615500D96B6F /* BaseViewController.m in Sources */,
+				8C1312721EA99E8B0052CC89 /* HomePageViewController.m in Sources */,
+				8C13126C1EA99DDA0052CC89 /* CustomerServiceCenterViewController.m in Sources */,
 				8C2C23441EA8556300D96B6F /* AppDelegate.m in Sources */,
 				8C2C23411EA8556300D96B6F /* main.m in Sources */,
+				8C1312781EA99F400052CC89 /* MyCenterViewController.m in Sources */,
+				8C1312801EA9DE530052CC89 /* ConfigUnivasal.m in Sources */,
+				8C13126F1EA99E450052CC89 /* EnterpriseViewController.m in Sources */,
+				8C1312751EA99EFF0052CC89 /* MaintainRightsViewController.m in Sources */,
+				8C2C237B1EA861B600D96B6F /* BaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,10 +740,14 @@
 		};
 		8C2C236A1EA8556300D96B6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CEF291A3E8C1AADEF0FA377 /* Pods-VehicleRepairNetPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6K24DWR7K9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/me/Desktop/MyFile/公司文件/参考/VehicleRepairNetPro/VehicleRepairNetPro/PrefixHeader.pch";
 				INFOPLIST_FILE = VehicleRepairNetPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xingtongBeidou.VehicleRepairNetPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,10 +756,14 @@
 		};
 		8C2C236B1EA8556300D96B6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 816557B71F41A522DD63741A /* Pods-VehicleRepairNetPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6K24DWR7K9;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/me/Desktop/MyFile/公司文件/参考/VehicleRepairNetPro/VehicleRepairNetPro/PrefixHeader.pch";
 				INFOPLIST_FILE = VehicleRepairNetPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xingtongBeidou.VehicleRepairNetPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,6 +772,7 @@
 		};
 		8C2C236D1EA8556300D96B6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2927B2329AF42932D90FF987 /* Pods-VehicleRepairNetProTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 6K24DWR7K9;
@@ -462,6 +786,7 @@
 		};
 		8C2C236E1EA8556300D96B6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93C9B617C1FBD721D15AAA60 /* Pods-VehicleRepairNetProTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 6K24DWR7K9;
@@ -475,6 +800,7 @@
 		};
 		8C2C23701EA8556300D96B6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B7BADBC205C6E8EF34BB427 /* Pods-VehicleRepairNetProUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6K24DWR7K9;
 				INFOPLIST_FILE = VehicleRepairNetProUITests/Info.plist;
@@ -487,6 +813,7 @@
 		};
 		8C2C23711EA8556300D96B6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE9945FF9D57D3CACBA19EC2 /* Pods-VehicleRepairNetProUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6K24DWR7K9;
 				INFOPLIST_FILE = VehicleRepairNetProUITests/Info.plist;
@@ -516,6 +843,7 @@
 				8C2C236B1EA8556300D96B6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C2C236C1EA8556300D96B6F /* Build configuration list for PBXNativeTarget "VehicleRepairNetProTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +852,7 @@
 				8C2C236E1EA8556300D96B6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C2C236F1EA8556300D96B6F /* Build configuration list for PBXNativeTarget "VehicleRepairNetProUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +861,7 @@
 				8C2C23711EA8556300D96B6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

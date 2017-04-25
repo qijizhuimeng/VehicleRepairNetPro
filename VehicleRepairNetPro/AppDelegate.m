@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "CustomTabBarController.h"
+//#import "ConfigUnivasal.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    CustomTabBarController *rootVC = [[CustomTabBarController alloc] init];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window.backgroundColor = getColor(redColor); // 最好将颜色用一个类或者方法来实现
+    
+    self.window.rootViewController = rootVC;
+    
+    [self.window makeKeyAndVisible];// 不能少
+    
+    
     return YES;
 }
 
