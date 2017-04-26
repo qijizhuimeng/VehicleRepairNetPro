@@ -23,4 +23,12 @@
 // 隐藏大菊花
 -(void)hideProgressHUD;
 
+//显示弹出提示信息
+-(void)showMessage:(NSString *)message;
+//网络请求失败的弹出信息
+-(void)showError:(NSError *)error;
+
+// 根据文本的内容和视图的宽度及字体来获取可变的高度
+-(CGFloat)getHeightWithDetailText:(NSString *)text width:(CGFloat)width font:(UIFont *)font;
+
 @end

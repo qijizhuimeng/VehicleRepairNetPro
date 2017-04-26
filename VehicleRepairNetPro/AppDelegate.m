@@ -31,6 +31,7 @@
     [self.window makeKeyAndVisible];// 不能少
     
     
+    
     return YES;
 }
 

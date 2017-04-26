@@ -20,6 +20,8 @@
     self.navigationItem.title = @"企业查询";
     [self createRightButtonItem];
     
+    [self showMessage:@"测试"];
+    
 //    [self showProgressHUD];
 }
 
