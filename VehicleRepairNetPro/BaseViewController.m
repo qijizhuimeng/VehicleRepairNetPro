@@ -80,6 +80,11 @@
     }
 }
 
+-(void)failureWithStatus:(NSString *)status message:(NSString *)message {
+    NSLog(@"staus:%@,msg%@",status,message);
+    //如果没有登录走登录状态
+}
+
 -(CGFloat)getHeightWithDetailText:(NSString *)text width:(CGFloat)width font:(UIFont *)font {
     CGRect rect = [text boundingRectWithSize:CGSizeMake(width, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
     return rect.size.height;

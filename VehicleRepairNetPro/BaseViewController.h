@@ -31,4 +31,7 @@
 // 根据文本的内容和视图的宽度及字体来获取可变的高度
 -(CGFloat)getHeightWithDetailText:(NSString *)text width:(CGFloat)width font:(UIFont *)font;
 
+//如果没有登录，通过这个走登录界面
+-(void)failureWithStatus:(NSString *)status message:(NSString *)message;
+
 @end
