@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+// Tag BASE
+#define BASE_KEFU_TAG 10000
+#define BASE_ENTERPRISE_TAG 20000
+#define BASE_HOMEPAGE_TAG 30000
+#define BASE_WEIQUAN_TAG 40000
+#define BASE_MY_TAG 50000
+
+// 屏幕
 #define SCREEN_WHIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
