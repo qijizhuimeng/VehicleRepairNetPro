@@ -15,4 +15,10 @@
 #import "ConfigUnivasal.h"
 #import <Masonry.h>
 
+// 服务器 地址
+#define BASE_URL @"http://www.yzqcwx.com/" // 外网
+//#define BASE_URL @"http://192.168.1.124:8081/VMAR/" // 内网
+//接口
+#define getEnterpriseList_URL @"app/enterprise/getEnterpriseList" //企业查询类别
+
 #endif /* PrefixHeader_pch */

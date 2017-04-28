@@ -23,5 +23,6 @@ pod 'MJRefresh'
 pod 'SDCycleScrollView','~> 1.3'
 pod 'MBProgressHUD'
 pod 'Masonry'
+pod 'JSONModel'
 
 end

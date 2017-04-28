@@ -8,7 +8,9 @@
 
 #import "EnterpriseViewController.h"
 
-@interface EnterpriseViewController ()
+@interface EnterpriseViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, strong)UITableView *tableView;
 
 @end
 
@@ -19,12 +21,25 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"企业查询";
     [self createRightButtonItem];
-    
-    [self showMessage:@"测试"];
-    
-//    [self showProgressHUD];
+    [self createTable];
+    [self requestLoadData];
 }
 
+// 请求数据
+-(void)requestLoadData {
+    
+}
+
+// 创建Table
+-(void)createTable {
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WHIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    
+    [self.view addSubview:_tableView];
+}
+
+// 穿件搜索的buttonItem
 -(void)createRightButtonItem {
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     rightButton.frame = CGRectMake(0, 0, 20, 20);                                
@@ -32,9 +47,31 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
+
+#pragma mark UItableView 的代理方法
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellId = @"cellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"本地数据，第%ld行",indexPath.row];
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"选中了第%ld行",indexPath.row);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 /*
