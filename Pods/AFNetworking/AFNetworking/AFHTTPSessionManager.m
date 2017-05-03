@@ -272,18 +272,35 @@
 
         return nil;
     }
-
+    
     __block NSURLSessionDataTask *dataTask = nil;
     dataTask = [self dataTaskWithRequest:request
                           uploadProgress:uploadProgress
                         downloadProgress:downloadProgress
                        completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
+                           NSString *requestJsonStr;
+                           if (parameters == nil) {
+                               requestJsonStr = @"空";
+                           }else {
+                               NSData *requestJsonData = [NSJSONSerialization dataWithJSONObject:parameters options:NSJSONWritingPrettyPrinted error:nil];
+                               requestJsonStr = [[NSString alloc] initWithData:requestJsonData encoding:NSUTF8StringEncoding];
+                           }
+                           NSString *urlStr = [NSString stringWithFormat:@"%@%@",self.baseURL,URLString];
         if (error) {
             if (failure) {
+                NSLog(@"请求链接:%@",  urlStr);
+                NSLog(@"入参：%@",requestJsonStr);
+                NSLog(@"请求失败:%@",[error localizedDescription]);
                 failure(dataTask, error);
             }
         } else {
             if (success) {
+                NSData *responseJsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:nil];
+                NSString *responseJsonStr = [[NSString alloc] initWithData:responseJsonData encoding:NSUTF8StringEncoding];
+                NSLog(@"请求链接:%@",urlStr);
+                NSLog(@"入参：%@",requestJsonStr);
+                NSLog(@"回参：%@",responseJsonStr);
+                success(dataTask, responseObject);
                 success(dataTask, responseObject);
             }
         }

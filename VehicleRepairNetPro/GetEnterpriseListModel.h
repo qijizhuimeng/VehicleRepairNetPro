@@ -11,9 +11,12 @@
 
 @interface GetEnterpriseListModel : JSONModel
 
-@property (nonatomic, strong, readonly) NSString *status;
-@property (nonatomic, strong, readonly) NSString *msg;
-@property (nonatomic, strong) GetEnterpriseListDataModel *dateaModel;
+@property (nonatomic, strong) NSString *status;
+@property (nonatomic, strong) NSString *msg;
+
+@property (nonatomic, strong) GetEnterpriseListDataModel *dataModel;
+
+-(GetEnterpriseListModel *)getListModelWithDictionary:(NSDictionary *)dictionary error:(NSError *)error;
 
 
 @end

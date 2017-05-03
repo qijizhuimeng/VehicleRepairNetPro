@@ -10,4 +10,18 @@
 
 @implementation GetEnterpriseListDataModel
 
++(BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
+-(GetEnterpriseListDataModel *)getListDataModelWithDictionary:(NSDictionary *)dictionary {
+    self.totalnum = [[dictionary objectForKey:@"data"] objectForKey:@"totalnum"];
+    self.totalpage = [[dictionary objectForKey:@"data"] objectForKey:@"totalpage"];
+    self.currentpage = [[dictionary objectForKey:@"data"] objectForKey:@"currentpage"];
+    self.pageTime = [[dictionary objectForKey:@"data"] objectForKey:@"pageTime"];
+    self.info = [[dictionary objectForKey:@"data"] objectForKey:@"info"];
+    
+    return self;
+}
+
 @end

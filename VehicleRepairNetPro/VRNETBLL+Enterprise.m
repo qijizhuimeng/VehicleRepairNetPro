@@ -10,7 +10,8 @@
 
 @implementation VRNETBLL (Enterprise)
 
-+(instancetype)getEnterpriseListWithCurrentPage:(NSString *)currentPage isCredible:(NSString *)isCredible isJiangsuFastRepair:(NSString *)isJiangsuFastRepair isGreenMechanics:(NSString *)isGreenMechanics isRescue:(NSString *)isRescue differential:(NSString *)differential level:(NSString *)level scope:(NSString *)scope Block:(void (^)(GetEnterpriseListModel *listModel,NSError *error))block {
++(NSURLSessionTask *)getEnterpriseListWithCurrentPage:(NSString *)currentPage isCredible:(NSString *)isCredible isJiangsuFastRepair:(NSString *)isJiangsuFastRepair isGreenMechanics:(NSString *)isGreenMechanics isRescue:(NSString *)isRescue differential:(NSString *)differential level:(NSString *)level scope:(NSString *)scope Block:(void (^)(GetEnterpriseListModel *listModel,NSError *error))block {
+    
     NSDictionary *parameters = @{
                                  @"currentPage":currentPage,
                                  @"differential":differential,
@@ -21,9 +22,24 @@
                                  @"isRescue":isRescue,
                                  @"level":level
                                  };
+    
     NSString *postUrl = getEnterpriseList_URL;
     
-    return nil;
+    return [[AFAppDotNetApIClient shareClient] POST:postUrl parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    
+        GetEnterpriseListModel *model = [[GetEnterpriseListModel alloc] getListModelWithDictionary:responseObject error:nil];
+        if (block) {
+            block(model,nil);
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (block) {
+            block(nil,error);
+        }
+        
+    }];
 }
 
 @end

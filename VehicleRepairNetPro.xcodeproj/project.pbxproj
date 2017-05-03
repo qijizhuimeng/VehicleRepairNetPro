@@ -30,6 +30,8 @@
 		8C48F6E81EB3242A006B4932 /* VRNETBLL+Enterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C48F6E71EB3242A006B4932 /* VRNETBLL+Enterprise.m */; };
 		8C48F6EB1EB336FF006B4932 /* GetEnterpriseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C48F6EA1EB336FF006B4932 /* GetEnterpriseListModel.m */; };
 		8C48F6EF1EB337CD006B4932 /* GetEnterpriseListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C48F6EE1EB337CD006B4932 /* GetEnterpriseListDataModel.m */; };
+		8C9E66181EB9622A004F2401 /* GetEnterpriseListDataInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9E66171EB9622A004F2401 /* GetEnterpriseListDataInfoModel.m */; };
+		8C9E661B1EB9C9D9004F2401 /* EnterPriseEmListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9E661A1EB9C9D9004F2401 /* EnterPriseEmListModel.m */; };
 		ABD66849D3E6552967AC83F7 /* libPods-VehicleRepairNetProUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1AE57675B872123AE89C9E /* libPods-VehicleRepairNetProUITests.a */; };
 		B97101FCA828B2A75A1DE428 /* libPods-VehicleRepairNetProTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 722E2BFF7EF006FC857350BD /* libPods-VehicleRepairNetProTests.a */; };
 		E7F148CFFCA22DC4CC3C5F00 /* libPods-VehicleRepairNetPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FC446192657FEE36374962 /* libPods-VehicleRepairNetPro.a */; };
@@ -106,6 +108,10 @@
 		8C48F6EA1EB336FF006B4932 /* GetEnterpriseListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetEnterpriseListModel.m; sourceTree = "<group>"; };
 		8C48F6ED1EB337CD006B4932 /* GetEnterpriseListDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetEnterpriseListDataModel.h; sourceTree = "<group>"; };
 		8C48F6EE1EB337CD006B4932 /* GetEnterpriseListDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetEnterpriseListDataModel.m; sourceTree = "<group>"; };
+		8C9E66161EB9622A004F2401 /* GetEnterpriseListDataInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetEnterpriseListDataInfoModel.h; sourceTree = "<group>"; };
+		8C9E66171EB9622A004F2401 /* GetEnterpriseListDataInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetEnterpriseListDataInfoModel.m; sourceTree = "<group>"; };
+		8C9E66191EB9C9D9004F2401 /* EnterPriseEmListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterPriseEmListModel.h; sourceTree = "<group>"; };
+		8C9E661A1EB9C9D9004F2401 /* EnterPriseEmListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterPriseEmListModel.m; sourceTree = "<group>"; };
 		93C9B617C1FBD721D15AAA60 /* Pods-VehicleRepairNetProTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRepairNetProTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleRepairNetProTests/Pods-VehicleRepairNetProTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE9945FF9D57D3CACBA19EC2 /* Pods-VehicleRepairNetProUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleRepairNetProUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleRepairNetProUITests/Pods-VehicleRepairNetProUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA1AE57675B872123AE89C9E /* libPods-VehicleRepairNetProUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VehicleRepairNetProUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +355,10 @@
 				8C48F6EA1EB336FF006B4932 /* GetEnterpriseListModel.m */,
 				8C48F6ED1EB337CD006B4932 /* GetEnterpriseListDataModel.h */,
 				8C48F6EE1EB337CD006B4932 /* GetEnterpriseListDataModel.m */,
+				8C9E66161EB9622A004F2401 /* GetEnterpriseListDataInfoModel.h */,
+				8C9E66171EB9622A004F2401 /* GetEnterpriseListDataInfoModel.m */,
+				8C9E66191EB9C9D9004F2401 /* EnterPriseEmListModel.h */,
+				8C9E661A1EB9C9D9004F2401 /* EnterPriseEmListModel.m */,
 			);
 			name = enterpriseModel;
 			sourceTree = "<group>";
@@ -642,6 +652,7 @@
 				8C2C23771EA8615500D96B6F /* BaseViewController.m in Sources */,
 				8C1312721EA99E8B0052CC89 /* HomePageViewController.m in Sources */,
 				8C48F6E81EB3242A006B4932 /* VRNETBLL+Enterprise.m in Sources */,
+				8C9E661B1EB9C9D9004F2401 /* EnterPriseEmListModel.m in Sources */,
 				8C13126C1EA99DDA0052CC89 /* CustomerServiceCenterViewController.m in Sources */,
 				8C48F6EF1EB337CD006B4932 /* GetEnterpriseListDataModel.m in Sources */,
 				8C2C23441EA8556300D96B6F /* AppDelegate.m in Sources */,
@@ -649,6 +660,7 @@
 				8C48F6E21EB316BF006B4932 /* CommonReturnModel.m in Sources */,
 				8C1312781EA99F400052CC89 /* MyCenterViewController.m in Sources */,
 				8C1312801EA9DE530052CC89 /* ConfigUnivasal.m in Sources */,
+				8C9E66181EB9622A004F2401 /* GetEnterpriseListDataInfoModel.m in Sources */,
 				8C13126F1EA99E450052CC89 /* EnterpriseViewController.m in Sources */,
 				8C48F6E51EB31BC5006B4932 /* AFAppDotNetApIClient.m in Sources */,
 				8C1312751EA99EFF0052CC89 /* MaintainRightsViewController.m in Sources */,

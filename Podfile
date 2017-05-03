@@ -18,7 +18,7 @@ target 'VehicleRepairNetPro' do
   end
 
 platform :ios, ‘7.0’
-pod "AFNetworking"
+pod 'AFNetworking'
 pod 'MJRefresh'
 pod 'SDCycleScrollView','~> 1.3'
 pod 'MBProgressHUD'
