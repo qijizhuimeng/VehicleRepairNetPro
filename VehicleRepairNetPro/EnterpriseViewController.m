@@ -9,6 +9,7 @@
 #import "EnterpriseViewController.h"
 #import "VRNETBLL+Enterprise.h"
 #import <MJRefresh.h>
+#import "EnterpriseDetailViewController.h"
 
 @interface EnterpriseViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -59,7 +60,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-
+    [super viewWillAppear:animated];
+    
     NSLog(@"view将要出现");
     [self requestLoadData];
 }
@@ -78,6 +80,7 @@
 //    self.tableView.mj_footer
 }
 
+#pragma mark 下拉刷新、上拉加载
 -(void)createRefresh {
     _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self requestLoadData];
@@ -86,18 +89,15 @@
     _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [self getEnterpriseListWithCurrentPage:self.currentPage isCredible:@"false" isJiangsuFastRepair:@"false" isGreenMechanics:@"false" isRescue:@"false" differential:@"" level:@"" scope:@""];
     }];
-
-    
 }
 
 
-
-// 请求数据
+#pragma  mark 企业查询列表网络请求
 -(void)requestLoadData{
     [self getEnterpriseListWithCurrentPage:@"0" isCredible:@"false" isJiangsuFastRepair:@"false" isGreenMechanics:@"false" isRescue:@"false" differential:@"" level:@"" scope:@""];
 }
 
-// 创建Table
+#pragma mark 创建TableView
 -(void)createTableView {
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WHIDTH, SCREEN_HEIGHT - 64 - 54) style:UITableViewStylePlain];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -107,7 +107,7 @@
     [self.view addSubview:_tableView];
 }
 
-// 穿件搜索的buttonItem
+#pragma mark 搜索的buttonItem
 -(void)createRightButtonItem {
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     rightButton.frame = CGRectMake(0, 0, 20, 20);                                
@@ -116,28 +116,38 @@
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
-#pragma mark UItableView 的代理方法
-
+#pragma mark 返回UITableViewCell 的代理方法
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellId = @"cellId";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = [NSString stringWithFormat:@"本地数据，第%ld行",indexPath.row];
     GetEnterpriseListDataInfoModel *infoModel = self.mArr[indexPath.row];
     cell.textLabel.text = infoModel.name;
     return cell;
 }
 
+#pragma mark 返回UITableViewCell 行数 的代理方法
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.mArr.count;
 }
 
+#pragma mark 选中UITableViewCell 的代理方法
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"选中了第%ld行",indexPath.row);
+    GetEnterpriseListDataInfoModel *infoModel = self.mArr[indexPath.row];
+    EnterpriseDetailViewController *detailVC = [[EnterpriseDetailViewController alloc] init];
+    detailVC.enterpriseId = infoModel.id;
+    detailVC.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
+    
 }
 
+#pragma mark 返回UITableViewCell 高度的代理方法
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80.0f;
 }

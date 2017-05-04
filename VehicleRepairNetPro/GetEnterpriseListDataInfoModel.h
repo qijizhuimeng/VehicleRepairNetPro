@@ -14,7 +14,7 @@
 @property (nonatomic, strong)NSArray * emList;
 @property (nonatomic, strong)NSString * isRescue;
 @property (nonatomic, strong)NSString * telephone;
-@property (nonatomic, strong)NSString * sList;
+@property (nonatomic, strong)NSArray * sList;// 换为数组
 @property (nonatomic, strong)NSString * img;
 @property (nonatomic, strong)NSString * latitude;
 @property (nonatomic, strong)NSString * rescueCall;
@@ -28,8 +28,12 @@
 @property (nonatomic, strong)NSString * isJiangsuFastRepair;
 @property (nonatomic, strong)NSString * createTime;
 @property (nonatomic, strong)NSString * optTime;
-@property (nonatomic, strong)NSString * dList;
+@property (nonatomic, strong)NSArray * dList; // 换为数组
 @property (nonatomic, strong)NSString * review;
+
+
+
+
 
 
 + (NSMutableArray*)arrayInfoModelWithInfoArr:(NSArray *)infoArr;

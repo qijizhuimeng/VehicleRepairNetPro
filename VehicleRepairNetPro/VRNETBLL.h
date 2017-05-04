@@ -12,6 +12,7 @@
 #import "AFAppDotNetApIClient.h"
 #import "GetEnterpriseListModel.h"
 #import "EnterPriseEmListModel.h"
+#import "GetEnterpriseDetailModel.h"
 
 @interface VRNETBLL : NSObject
 

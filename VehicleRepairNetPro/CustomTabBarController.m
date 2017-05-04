@@ -35,6 +35,9 @@
         
         baseVC.tabBarItem.image = [UIImage imageNamed:iconImgArr[i]];
         baseVC.tabBarItem.selectedImage = [[UIImage imageNamed:selectedIconImgArr[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; // 特别注意
+        // 在基类里同意设置
+        baseVC.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+        
         
         baseVC.tabBarItem.title = titleArr[i];
         

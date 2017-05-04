@@ -20,5 +20,6 @@
 //#define BASE_URL @"http://192.168.1.124:8081/VMAR/" // 内网
 //接口
 #define getEnterpriseList_URL @"app/enterprise/getEnterpriseList" //企业查询类别
+#define getEnterpriseDetail_URL @"app/enterprise/getEnterpriseDetail" // 企业详情
 
 #endif /* PrefixHeader_pch */

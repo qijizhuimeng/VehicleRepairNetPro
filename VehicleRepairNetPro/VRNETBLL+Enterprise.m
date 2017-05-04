@@ -42,4 +42,18 @@
     }];
 }
 
++(NSURLSessionDataTask *)getEnterpriseDetailWithId:(NSString *)enterpriseId Block:(void (^)(GetEnterpriseDetailModel *detailModel, NSError *error))block {
+    NSDictionary *paramer = @{@"enterpriseId":enterpriseId};
+    NSString *post = getEnterpriseDetail_URL;
+    return [[AFAppDotNetApIClient shareClient] POST:post parameters:paramer progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        GetEnterpriseDetailModel *model = [[GetEnterpriseDetailModel alloc] GetEnterpriseDetailModelWithDictonary:responseObject];
+        block(model,nil);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        block(nil,error);
+    }];
+}
+
 @end
