@@ -44,7 +44,6 @@
                     [self.tableView.mj_footer endRefreshingWithNoMoreData]; // 加载完成状态
                 }else {
                     [self.tableView.mj_footer resetNoMoreData]; // 普通闲置状态
-                    
                 }
                 
             }else {

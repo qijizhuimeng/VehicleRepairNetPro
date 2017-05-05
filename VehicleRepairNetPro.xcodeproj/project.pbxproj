@@ -25,6 +25,9 @@
 		8C2C23651EA8556300D96B6F /* VehicleRepairNetProUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23641EA8556300D96B6F /* VehicleRepairNetProUITests.m */; };
 		8C2C23771EA8615500D96B6F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23761EA8615500D96B6F /* BaseViewController.m */; };
 		8C2C237B1EA861B600D96B6F /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C237A1EA861B600D96B6F /* BaseTableViewController.m */; };
+		8C3DAC601EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DAC5F1EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.m */; };
+		8C3DAC631EBC1D8700364CE0 /* EnterpriseListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DAC621EBC1D8700364CE0 /* EnterpriseListTableViewCell.m */; };
+		8C3DAC671EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DAC661EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m */; };
 		8C48F6DF1EB2DA91006B4932 /* VRNETBLL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C48F6DE1EB2DA91006B4932 /* VRNETBLL.m */; };
 		8C48F6E21EB316BF006B4932 /* CommonReturnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C48F6E11EB316BF006B4932 /* CommonReturnModel.m */; };
 		8C48F6E51EB31BC5006B4932 /* AFAppDotNetApIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C48F6E41EB31BC5006B4932 /* AFAppDotNetApIClient.m */; };
@@ -100,6 +103,12 @@
 		8C2C23761EA8615500D96B6F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		8C2C23791EA861B600D96B6F /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		8C2C237A1EA861B600D96B6F /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		8C3DAC5E1EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterpriseDetailTableViewCell.h; sourceTree = "<group>"; };
+		8C3DAC5F1EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterpriseDetailTableViewCell.m; sourceTree = "<group>"; };
+		8C3DAC611EBC1D8700364CE0 /* EnterpriseListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterpriseListTableViewCell.h; sourceTree = "<group>"; };
+		8C3DAC621EBC1D8700364CE0 /* EnterpriseListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterpriseListTableViewCell.m; sourceTree = "<group>"; };
+		8C3DAC651EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterpriseAbstractTableViewCell.h; sourceTree = "<group>"; };
+		8C3DAC661EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterpriseAbstractTableViewCell.m; sourceTree = "<group>"; };
 		8C48F6DD1EB2DA91006B4932 /* VRNETBLL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRNETBLL.h; sourceTree = "<group>"; };
 		8C48F6DE1EB2DA91006B4932 /* VRNETBLL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRNETBLL.m; sourceTree = "<group>"; };
 		8C48F6E01EB316BF006B4932 /* CommonReturnModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonReturnModel.h; sourceTree = "<group>"; };
@@ -177,6 +186,7 @@
 		8C12DD1E1EBAB343006B6FA8 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8C3DAC641EBC558E00364CE0 /* cell */,
 				8C12DD1F1EBAB3B3006B6FA8 /* EnterpriseDetailViewController.h */,
 				8C12DD201EBAB3B3006B6FA8 /* EnterpriseDetailViewController.m */,
 			);
@@ -213,6 +223,7 @@
 		8C1312691EA99D790052CC89 /* 企业查询 */ = {
 			isa = PBXGroup;
 			children = (
+				8C3DAC5D1EBC1D2A00364CE0 /* Cell */,
 				8C13126D1EA99E450052CC89 /* EnterpriseViewController.h */,
 				8C13126E1EA99E450052CC89 /* EnterpriseViewController.m */,
 				8C12DD1E1EBAB343006B6FA8 /* Detail */,
@@ -341,6 +352,26 @@
 				8C13126B1EA99DDA0052CC89 /* CustomerServiceCenterViewController.m */,
 			);
 			name = "客服中心";
+			sourceTree = "<group>";
+		};
+		8C3DAC5D1EBC1D2A00364CE0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8C3DAC611EBC1D8700364CE0 /* EnterpriseListTableViewCell.h */,
+				8C3DAC621EBC1D8700364CE0 /* EnterpriseListTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		8C3DAC641EBC558E00364CE0 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				8C3DAC5E1EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.h */,
+				8C3DAC5F1EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.m */,
+				8C3DAC651EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.h */,
+				8C3DAC661EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		8C48F6DB1EB2D9B0006B4932 /* Model */ = {
@@ -672,6 +703,7 @@
 				8C1312721EA99E8B0052CC89 /* HomePageViewController.m in Sources */,
 				8C48F6E81EB3242A006B4932 /* VRNETBLL+Enterprise.m in Sources */,
 				8C9E661B1EB9C9D9004F2401 /* EnterPriseEmListModel.m in Sources */,
+				8C3DAC631EBC1D8700364CE0 /* EnterpriseListTableViewCell.m in Sources */,
 				8C13126C1EA99DDA0052CC89 /* CustomerServiceCenterViewController.m in Sources */,
 				8C48F6EF1EB337CD006B4932 /* GetEnterpriseListDataModel.m in Sources */,
 				8C2C23441EA8556300D96B6F /* AppDelegate.m in Sources */,
@@ -679,6 +711,7 @@
 				8C48F6E21EB316BF006B4932 /* CommonReturnModel.m in Sources */,
 				8C1312781EA99F400052CC89 /* MyCenterViewController.m in Sources */,
 				8C1312801EA9DE530052CC89 /* ConfigUnivasal.m in Sources */,
+				8C3DAC671EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m in Sources */,
 				8C9E66181EB9622A004F2401 /* GetEnterpriseListDataInfoModel.m in Sources */,
 				8C13126F1EA99E450052CC89 /* EnterpriseViewController.m in Sources */,
 				8C48F6E51EB31BC5006B4932 /* AFAppDotNetApIClient.m in Sources */,
@@ -686,6 +719,7 @@
 				8C48F6EB1EB336FF006B4932 /* GetEnterpriseListModel.m in Sources */,
 				8C9E661E1EB9DAF4004F2401 /* GetEnterpriseDetailModel.m in Sources */,
 				8C2C237B1EA861B600D96B6F /* BaseTableViewController.m in Sources */,
+				8C3DAC601EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,12 +31,13 @@
 @property (nonatomic, strong)NSArray * dList; // 换为数组
 @property (nonatomic, strong)NSString * review;
 
-
-
+@property (nonatomic, strong)NSString *creditLevel;
+@property (nonatomic, strong)NSString *rescuePrice;
 
 
 
 + (NSMutableArray*)arrayInfoModelWithInfoArr:(NSArray *)infoArr;
+
 
 @end
 

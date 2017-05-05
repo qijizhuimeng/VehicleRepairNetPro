@@ -24,5 +24,6 @@ pod 'SDCycleScrollView','~> 1.3'
 pod 'MBProgressHUD'
 pod 'Masonry'
 pod 'JSONModel'
+pod 'SDWebImage'
 
 end
