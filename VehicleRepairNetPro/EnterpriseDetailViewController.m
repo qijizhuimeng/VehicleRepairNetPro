@@ -25,7 +25,6 @@
 @property (nonatomic, strong)UILabel *starLevelLab;// 星级
 @property (nonatomic, strong)UILabel *line; // 分割线
 
-
 @end
 
 @implementation EnterpriseDetailViewController

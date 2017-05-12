@@ -10,6 +10,7 @@
 #import "VRNETBLL+Enterprise.h"
 #import <MJRefresh.h>
 #import "EnterpriseDetailViewController.h"
+#import "CompanyQueryView.h"
 
 @interface EnterpriseViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -20,6 +21,7 @@
 @property (nonatomic, strong)MJRefreshHeader *headerRefresh; // 下拉刷新
 @property (nonatomic, strong)MJRefreshFooter *footerRefresh; // 加载更多
 @property (nonatomic, strong)NSString *currentPage;// 当前页
+@property (nonatomic, strong)CompanyQueryView *companyQueryView; // 侧边栏视图
 
 @end
 
@@ -65,18 +67,29 @@
     [self requestLoadData];
 }
 
+-(CompanyQueryView *)companyQueryView {
+    if (!_companyQueryView) {
+        _companyQueryView = [_companyQueryView initWithView:self.view];
+//        _companyQueryView.frame = CGRectMake(0, 0, SCREEN_WHIDTH, SCREEN_HEIGHT);
+    }
+    return _companyQueryView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"企业查询";
     self.currentPage = @"0";
     [self createRightButtonItem];
+    [self.view addSubview:self.companyQueryView];
     [self createTableView];
     [self createRefresh];
+    
 }
 
 -(void)customTableFooterView {
 //    self.tableView.mj_footer
+    
 }
 
 #pragma mark 下拉刷新、上拉加载
@@ -109,10 +122,20 @@
 #pragma mark 搜索的buttonItem
 -(void)createRightButtonItem {
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightButton addTarget:self action:@selector(searchClick:) forControlEvents:UIControlEventTouchUpInside];
     rightButton.frame = CGRectMake(0, 0, 20, 20);                                
     [rightButton setImage:[UIImage imageNamed:@"searchImage"] forState:UIControlStateNormal];
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+-(void)searchClick:(UIButton *)sender {
+
+    if (self.companyQueryView.hidden) {
+        [self.companyQueryView showSearchView];
+        NSLog(@"企业查询按钮");
+    }
+    
 }
 
 #pragma mark 返回UITableViewCell 的代理方法
@@ -143,7 +166,6 @@
     detailVC.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
     [self.navigationController pushViewController:detailVC animated:YES];
-    
 }
 
 #pragma mark 返回UITableViewCell 高度的代理方法
@@ -152,7 +174,9 @@
 }
 
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
+    
 }
 
 /*

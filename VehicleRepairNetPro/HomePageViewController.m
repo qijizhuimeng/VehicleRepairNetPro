@@ -7,8 +7,11 @@
 //
 
 #import "HomePageViewController.h"
+#import <MJRefresh.h>
 
 @interface HomePageViewController ()
+
+@property (nonatomic ,strong)UIScrollView *scrollView;
 
 @end
 
@@ -18,6 +21,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"首页";
+    [self createScrollView];
+//    _scrollView.mj_header 
+}
+
+
+
+-(void)createScrollView {
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WHIDTH, SCREEN_HEIGHT)];
+    _scrollView.contentSize = CGSizeMake(SCREEN_WHIDTH, 100);
+    
+    
+    [self.view addSubview:_scrollView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
