@@ -14,6 +14,8 @@
 
 #import "ConfigUnivasal.h"
 #import <Masonry.h>
+#import "UIView+EXT.h"
+#import "UIView+Frame.h"
 
 // 服务器 地址
 #define BASE_URL @"http://www.yzqcwx.com/" // 外网
@@ -21,5 +23,6 @@
 //接口
 #define getEnterpriseList_URL @"app/enterprise/getEnterpriseList" //企业查询类别
 #define getEnterpriseDetail_URL @"app/enterprise/getEnterpriseDetail" // 企业详情
+#define getHomePage_URL @"app/homePage/index"  // 首页中轮播图、购买配件、企业之窗 接口
 
 #endif /* PrefixHeader_pch */

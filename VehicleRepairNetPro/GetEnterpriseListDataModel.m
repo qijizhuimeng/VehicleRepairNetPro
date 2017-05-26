@@ -20,7 +20,6 @@
     self.currentpage = [[dictionary objectForKey:@"data"] objectForKey:@"currentpage"];
     self.pageTime = [[dictionary objectForKey:@"data"] objectForKey:@"pageTime"];
     self.info = [[dictionary objectForKey:@"data"] objectForKey:@"info"];
-    
     return self;
 }
 

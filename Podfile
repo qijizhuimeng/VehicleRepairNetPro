@@ -25,5 +25,6 @@ pod 'MBProgressHUD'
 pod 'Masonry'
 pod 'JSONModel'
 pod 'SDWebImage'
+pod 'SDCycleScrollView'  
 
 end

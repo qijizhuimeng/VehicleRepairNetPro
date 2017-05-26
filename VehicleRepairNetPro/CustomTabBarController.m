@@ -38,7 +38,6 @@
         // 在基类里同意设置
         baseVC.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
         
-        
         baseVC.tabBarItem.title = titleArr[i];
         
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:baseVC];
@@ -49,12 +48,11 @@
     self.viewControllers = viewcontrollersArr;
     self.selectedIndex = 2;
 //    self.tabBar.tintColor = [UIColor clearColor];
-    self.tabBar.translucent = NO;// 线
+    self.tabBar.translucent = NO; // 线
     
     // 设置tabBarItem 的title的颜色
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor grayColor]} forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName :getColor(redColor)} forState:UIControlStateSelected];
-    
 }
 
 - (void)didReceiveMemoryWarning {

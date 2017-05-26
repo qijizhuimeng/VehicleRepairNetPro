@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+//#import "CGRectMakeCustom.h"
 
 // Tag BASE
 #define BASE_KEFU_TAG 10000
@@ -29,5 +31,20 @@ extern NSString *redColor;
 
 // 获取颜色
 UIColor *getColor(NSString *hexColor);
+
+// 自定义 cgrect
+CG_INLINE CGRect
+CGRectMake1(CGFloat x, CGFloat y, CGFloat width, CGFloat height)
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    
+    CGRect rect;
+
+    rect.origin.x = x * myDelegate.autoSizeScaleX; rect.origin.y = y * myDelegate.autoSizeScaleY;
+    
+    rect.size.width = width * myDelegate.autoSizeScaleX; rect.size.height = height * myDelegate.autoSizeScaleY;
+    
+    return rect;
+}
 
 @end

@@ -32,6 +32,7 @@
         GetEnterpriseListModel *model = [[GetEnterpriseListModel alloc] getListModelWithDictionary:responseObject error:nil];
         if (block) {
             block(model,nil);
+            
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

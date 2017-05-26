@@ -10,8 +10,12 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property float autoSizeScaleX;
+@property float autoSizeScaleY;
 @property (strong, nonatomic) UIWindow *window;
 
+//CG_INLINE CGRect
+//CGRectMake1(CGFloat x, CGFloat y, CGFloat width, CGFloat height);
 
 @end
 

@@ -8,6 +8,7 @@
 
 //#import "BaseTableViewController.h"
 #import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface HomePageViewController : BaseViewController
 
