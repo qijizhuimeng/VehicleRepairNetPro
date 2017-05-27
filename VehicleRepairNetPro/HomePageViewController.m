@@ -13,6 +13,7 @@
 #import "AccessoriesCollectionViewCell.h"
 #import "VRNETBLL+HomePage.h"
 #import "CarouselDetailViewController.h"
+#import "CarDoctorViewController.h"
 
 #define collectionViewCellId @"collectionViewCellID"
 #define collectionViewHeaderId @"collectionViewHeaderId"
@@ -173,16 +174,16 @@
         _sdcScrollView.imageURLStringsGroup = imageMarr;
     });
     
-    __weak typeof (self) weakSelf = self;
-    _sdcScrollView.clickItemOperationBlock = ^(NSInteger currentIndex) {
-        GetCarouselInfoListModel *carouselModel = weakSelf.carouselMarr[currentIndex];
-        NSLog(@"轮播图index %ld",currentIndex);
-        CarouselDetailViewController *detailVC = [[CarouselDetailViewController alloc] init];
-        [detailVC getAppLinkWithUrl:carouselModel.applink];
-        
-        [weakSelf.navigationController pushViewController:detailVC animated:YES];
-        detailVC.hidesBottomBarWhenPushed = YES;
-    };
+//    __weak typeof (self) weakSelf = self;
+//    _sdcScrollView.clickItemOperationBlock = ^(NSInteger currentIndex) {
+//        GetCarouselInfoListModel *carouselModel = weakSelf.carouselMarr[currentIndex];
+//        NSLog(@"轮播图index %ld",currentIndex);
+//        CarouselDetailViewController *detailVC = [[CarouselDetailViewController alloc] init];
+//        [detailVC getAppLinkWithUrl:carouselModel.applink];
+//        
+//        [weakSelf.navigationController pushViewController:detailVC animated:YES];
+//        detailVC.tabBarController.hidesBottomBarWhenPushed = YES;
+//    };
     
     // itemBtn
     NSArray *titleArr = @[@"车大夫专栏",@"预约维修",@"最新资讯",@"曝光台"];
@@ -200,9 +201,14 @@
 
 -(void)itemBtnClick:(UIButton *)sender {
     switch (sender.tag) {
-        case BASE_HOMEPAGE_TAG:
+        case BASE_HOMEPAGE_TAG:{
             NSLog(@"车大夫专栏");
+            CarDoctorViewController *carDoctorVC = [[CarDoctorViewController alloc] init];
+            self.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:carDoctorVC animated:YES];
+            self.hidesBottomBarWhenPushed = NO;
             break;
+        }
         case BASE_HOMEPAGE_TAG + 1:
             NSLog(@"预约维修");
             break;
@@ -365,6 +371,17 @@
 // 点击方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"currentIndexPath:%ld",indexPath.row);
+}
+
+//--------------------CyleSDScrollView 的delegate------------------
+-(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    GetCarouselInfoListModel *carouselModel = self.carouselMarr[index];
+    NSLog(@"轮播图index %ld",index);
+    CarouselDetailViewController *detailVC = [[CarouselDetailViewController alloc] init];
+    
+    [detailVC getPassCarouselInfoListModel:carouselModel];
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 /*

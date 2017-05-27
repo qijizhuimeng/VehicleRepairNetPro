@@ -38,6 +38,8 @@
 		8C3DAC601EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DAC5F1EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.m */; };
 		8C3DAC631EBC1D8700364CE0 /* EnterpriseListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DAC621EBC1D8700364CE0 /* EnterpriseListTableViewCell.m */; };
 		8C3DAC671EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3DAC661EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m */; };
+		8C45987B1ED91408006E04A3 /* CarDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4598791ED91408006E04A3 /* CarDoctorViewController.m */; };
+		8C4598811ED97AED006E04A3 /* CallQQAndTelephone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4598801ED97AED006E04A3 /* CallQQAndTelephone.m */; };
 		8C48F6DF1EB2DA91006B4932 /* VRNETBLL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C48F6DE1EB2DA91006B4932 /* VRNETBLL.m */; };
 		8C48F6E21EB316BF006B4932 /* CommonReturnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C48F6E11EB316BF006B4932 /* CommonReturnModel.m */; };
 		8C48F6E51EB31BC5006B4932 /* AFAppDotNetApIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C48F6E41EB31BC5006B4932 /* AFAppDotNetApIClient.m */; };
@@ -140,6 +142,10 @@
 		8C3DAC621EBC1D8700364CE0 /* EnterpriseListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterpriseListTableViewCell.m; sourceTree = "<group>"; };
 		8C3DAC651EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterpriseAbstractTableViewCell.h; sourceTree = "<group>"; };
 		8C3DAC661EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterpriseAbstractTableViewCell.m; sourceTree = "<group>"; };
+		8C4598781ED91408006E04A3 /* CarDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDoctorViewController.h; sourceTree = "<group>"; };
+		8C4598791ED91408006E04A3 /* CarDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDoctorViewController.m; sourceTree = "<group>"; };
+		8C45987F1ED97AED006E04A3 /* CallQQAndTelephone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallQQAndTelephone.h; sourceTree = "<group>"; };
+		8C4598801ED97AED006E04A3 /* CallQQAndTelephone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallQQAndTelephone.m; sourceTree = "<group>"; };
 		8C48F6DD1EB2DA91006B4932 /* VRNETBLL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRNETBLL.h; sourceTree = "<group>"; };
 		8C48F6DE1EB2DA91006B4932 /* VRNETBLL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRNETBLL.m; sourceTree = "<group>"; };
 		8C48F6E01EB316BF006B4932 /* CommonReturnModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonReturnModel.h; sourceTree = "<group>"; };
@@ -355,16 +361,16 @@
 		8C2C233E1EA8556300D96B6F /* VehicleRepairNetPro */ = {
 			isa = PBXGroup;
 			children = (
-				8C0B70A11ED42DB000CB323A /* Catagory */,
 				8C2C23451EA8556300D96B6F /* ViewController.h */,
 				8C2C23461EA8556300D96B6F /* ViewController.m */,
-				8C48F6E31EB31BC5006B4932 /* AFAppDotNetApIClient.h */,
-				8C48F6E41EB31BC5006B4932 /* AFAppDotNetApIClient.m */,
+				8C45987E1ED97258006E04A3 /* Help */,
+				8C0B70A11ED42DB000CB323A /* Catagory */,
 				8CF79F471EC1682800BB4EC1 /* View */,
 				8C48F6DC1EB2D9CC006B4932 /* BLL */,
 				8C48F6DB1EB2D9B0006B4932 /* Model */,
-				8C13127D1EA9DDF30052CC89 /* Config */,
 				8C2C237D1EA8B3F300D96B6F /* Controller */,
+				8C2C234B1EA8556300D96B6F /* Assets.xcassets */,
+				8C45987D1ED9141D006E04A3 /* 车大夫 */,
 				8C2C233F1EA8556300D96B6F /* Supporting Files */,
 			);
 			path = VehicleRepairNetPro;
@@ -422,7 +428,6 @@
 				8C1312691EA99D790052CC89 /* 企业查询 */,
 				8C1312681EA99D710052CC89 /* 首页 */,
 				8C1312671EA99D670052CC89 /* 我要维权 */,
-				8C2C234B1EA8556300D96B6F /* Assets.xcassets */,
 				8C1312661EA99D5B0052CC89 /* 我的 */,
 			);
 			name = Controller;
@@ -457,6 +462,26 @@
 			name = cell;
 			sourceTree = "<group>";
 		};
+		8C45987D1ED9141D006E04A3 /* 车大夫 */ = {
+			isa = PBXGroup;
+			children = (
+				8C4598781ED91408006E04A3 /* CarDoctorViewController.h */,
+				8C4598791ED91408006E04A3 /* CarDoctorViewController.m */,
+			);
+			name = "车大夫";
+			sourceTree = "<group>";
+		};
+		8C45987E1ED97258006E04A3 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				8C48F6E31EB31BC5006B4932 /* AFAppDotNetApIClient.h */,
+				8C48F6E41EB31BC5006B4932 /* AFAppDotNetApIClient.m */,
+				8C45987F1ED97AED006E04A3 /* CallQQAndTelephone.h */,
+				8C4598801ED97AED006E04A3 /* CallQQAndTelephone.m */,
+			);
+			name = Help;
+			sourceTree = "<group>";
+		};
 		8C48F6DB1EB2D9B0006B4932 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +496,7 @@
 		8C48F6DC1EB2D9CC006B4932 /* BLL */ = {
 			isa = PBXGroup;
 			children = (
+				8C13127D1EA9DDF30052CC89 /* Config */,
 				8C48F6DD1EB2DA91006B4932 /* VRNETBLL.h */,
 				8C48F6DE1EB2DA91006B4932 /* VRNETBLL.m */,
 				8C48F6E61EB3242A006B4932 /* VRNETBLL+Enterprise.h */,
@@ -813,8 +839,10 @@
 				8C2C23411EA8556300D96B6F /* main.m in Sources */,
 				8C48F6E21EB316BF006B4932 /* CommonReturnModel.m in Sources */,
 				8C1312781EA99F400052CC89 /* MyCenterViewController.m in Sources */,
+				8C45987B1ED91408006E04A3 /* CarDoctorViewController.m in Sources */,
 				8CF79F4A1EC16A6300BB4EC1 /* CompanyQueryView.m in Sources */,
 				8C1312801EA9DE530052CC89 /* ConfigUnivasal.m in Sources */,
+				8C4598811ED97AED006E04A3 /* CallQQAndTelephone.m in Sources */,
 				8C3DAC671EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m in Sources */,
 				8C9E66181EB9622A004F2401 /* GetEnterpriseListDataInfoModel.m in Sources */,
 				8C13126F1EA99E450052CC89 /* EnterpriseViewController.m in Sources */,

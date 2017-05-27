@@ -19,24 +19,33 @@
 -(UIWebView *)webView {
     if (!_webView) {
         _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WHIDTH, SCREEN_HEIGHT - 64)];
+        _webView.backgroundColor = getColor(@"f2f2f2");
+        _webView.scalesPageToFit = YES;
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.appLinkUrl]]];
     }
     return _webView;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self createWebView];
 }
 
--(void)getAppLinkWithUrl:(NSString *)url {
-    self.appLinkUrl = url;
+-(void)getPassCarouselInfoListModel:(GetCarouselInfoListModel *)model {
+    NSMutableString *mApplinkUrl = [[NSMutableString alloc] init];
+    NSString *appLinkUrl = model.applink;
+    for (int i = 0; i < appLinkUrl.length; i ++) {
+        NSString *temp = [appLinkUrl substringWithRange:NSMakeRange(i, 1)];
+        if (![temp isEqualToString:@" "]) {
+            [mApplinkUrl appendFormat:@"%@",temp];
+        }
+    }
+    self.appLinkUrl = mApplinkUrl;
+    self.navigationItem.title = model.title;
 }
 
 -(void)createWebView {
     [self.view addSubview:self.webView];
-    _webView.backgroundColor = [UIColor orangeColor];
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.appLinkUrl]]];
 }
 
 - (void)didReceiveMemoryWarning {

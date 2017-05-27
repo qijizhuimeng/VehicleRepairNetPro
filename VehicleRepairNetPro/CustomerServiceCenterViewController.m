@@ -220,7 +220,7 @@
     switch (sender.tag) {
         case 10001:
             NSLog(@"车大夫1");
-            [self callQQ:@"3217226612"];
+            [self callQQ:@"3217226612"]; 
             break;
         case 10002:
             NSLog(@"车大夫2");

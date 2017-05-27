@@ -7,12 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "GetCarouselInfoListModel.h"
 
 @interface CarouselDetailViewController : BaseViewController
 
 @property (nonatomic, strong) NSString *carouselId;
 @property (nonatomic, strong) NSString *appLinkUrl;
 
--(void)getAppLinkWithUrl:(NSString *)url;
+-(void)getPassCarouselInfoListModel:(GetCarouselInfoListModel *)model;
 
 @end
