@@ -118,7 +118,7 @@
     flowLayout.itemSize =CGSizeMake((SCREEN_WHIDTH - 16) / 2, (SCREEN_WHIDTH - 16) / 2);
     
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WHIDTH, SCREEN_HEIGHT - 64 - 49) collectionViewLayout:flowLayout];
-    _collectionView.backgroundColor = getColor(@"f2f2f2"); //[UIColor orangeColor];
+    _collectionView.backgroundColor = getColor(@"f2f2f2"); //[UIColor orangeColor];  
     
     [_collectionView registerClass:[AccessoriesCollectionViewCell class] forCellWithReuseIdentifier:collectionViewCellId];
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"collectionViewHeaderId"];
@@ -163,6 +163,7 @@
 //SDScrollCycleView and ItemBtn 轮播图和专栏按钮
 -(void)makeSDCyleScrollAndItemBtn {
     self.sdcScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake1(0, 0, 375, 160) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    self.sdcScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     NSMutableArray *imageMarr = [[NSMutableArray alloc] init];
     
     for (GetCarouselInfoListModel *carouselModel in _carouselMarr) {
@@ -189,7 +190,7 @@
     NSArray *titleArr = @[@"车大夫专栏",@"预约维修",@"最新资讯",@"曝光台"];
     NSArray *backImgArr = @[@"home_btn_icon0",@"home_btn_icon1",@"home_btn_icon2",@"home_btn_icon3"];
     for (int i = 0; i < 4 ; i ++) {
-        CustomButton *cutomBtn = [[CustomButton alloc] initWithFrame:CGRectMake1(20 + ((320 - 100) / 4 + 20) * i , 160 + 10,(320 - 100) / 4 , (320 - 100) / 4 + 10)];
+        CustomButton *cutomBtn = [[CustomButton alloc] initWithFrame:CGRectMake1(20 + ((320 - 100) / 4 + 20) * i , 160 + 10,(320 - 100) / 4 , 100)]; //(320 - 100) / 4 + 10
         cutomBtn.tag = BASE_HOMEPAGE_TAG + i;
         cutomBtn.imageView1.image = [UIImage imageNamed:backImgArr[i]];
         cutomBtn.textLabel.text = titleArr[i];
@@ -293,7 +294,7 @@
         make.top.mas_equalTo(0);
         make.left.equalTo(self.view);
         make.width.mas_equalTo(SCREEN_WHIDTH);
-        make.height.mas_equalTo(160 + 140);
+        make.height.mas_equalTo((160 + 140));
     }];
     
     [_backgroundCenterView mas_makeConstraints:^(MASConstraintMaker *make) {

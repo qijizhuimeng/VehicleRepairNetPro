@@ -8,14 +8,18 @@
 
 #import "CarDoctorViewController.h"
 #import "CallQQAndTelephone.h"
+//#import "VRNETBLL+CarDoctor.h"
+#import "CarDoctorDetailViewController.h"
 
 #define btnWitdtHeight (SCREEN_WHIDTH - 50 - 60)/3
+#define btnBaseWidth (SCREEN_WHIDTH - 24) / 5
 
 @interface CarDoctorViewController ()
 
 @property (nonatomic, strong)UIScrollView *scrollView;
 @property (nonatomic, strong)UIView *topView;
 @property (nonatomic, strong)UIView *bottomView;
+//@property (nonatomic, strong)CarDoctorModel *model;
 
 @end
 
@@ -88,6 +92,7 @@
     }];
     
 }
+
 -(void)carDoctorTouchClick:(UIButton *)sender {
     if (sender.tag == BASE_CARDOCTOR_TAG) {
         NSLog(@"车大夫1");
@@ -100,6 +105,7 @@
 }
 
 -(void)makeBottomView {
+    
     _bottomView = [[UIView alloc] init];
     _bottomView.backgroundColor = [UIColor whiteColor];
     [_scrollView addSubview:_bottomView];
@@ -110,6 +116,153 @@
         make.width.mas_equalTo(SCREEN_WHIDTH);
         make.height.mas_equalTo(450);
     }];
+    
+    // 车大夫介绍
+    UIButton *introduceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [introduceBtn setBackgroundImage:[UIImage imageNamed:@"carDoctorColumn_jieshao"] forState:UIControlStateNormal];
+    introduceBtn.tag = BASE_CARDOCTOR_TAG + 2; // 车大夫介绍的tag
+    [introduceBtn addTarget:self action:@selector(bottomBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_bottomView addSubview:introduceBtn];
+    [introduceBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_bottomView).offset(8);
+        make.left.equalTo(_bottomView).offset(8);
+        make.width.mas_equalTo(btnBaseWidth * 2);
+        make.height.mas_equalTo(208);
+    }];
+    
+    UILabel *introduceLab = [[UILabel alloc] init];
+    introduceLab.text = @"车大夫介绍";
+    introduceLab.textAlignment = NSTextAlignmentCenter;
+    introduceLab.font = [UIFont systemFontOfSize:20];
+    introduceLab.textColor = [UIColor whiteColor];
+    [introduceBtn addSubview:introduceLab];
+    [introduceLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(100 + 20);
+        make.centerX.equalTo(introduceBtn);
+        make.width.equalTo(introduceBtn);
+        make.height.mas_equalTo(20);
+    }];
+    UILabel *introduceLabEnglish= [[UILabel alloc] init];
+    introduceLabEnglish.text = @"Activities this week";
+    introduceLabEnglish.textAlignment = NSTextAlignmentCenter;
+    introduceLabEnglish.font = [UIFont systemFontOfSize:12];
+    introduceLabEnglish.textColor = [UIColor whiteColor];
+    [introduceBtn addSubview:introduceLabEnglish];
+    [introduceLabEnglish mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(introduceLab.mas_bottom).offset(8);
+        make.centerX.equalTo(introduceBtn);
+        make.width.equalTo(introduceBtn);
+        make.height.mas_equalTo(15);
+    }];
+    
+    // 常见故障
+    UIButton *malfunctionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [malfunctionBtn setBackgroundImage:[UIImage imageNamed:@"carDoctorColumn_changj"] forState:UIControlStateNormal];
+    malfunctionBtn.tag = BASE_CARDOCTOR_TAG + 3;// 常见故障
+    [malfunctionBtn addTarget:self action:@selector(bottomBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_bottomView addSubview:malfunctionBtn];
+    [malfunctionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_bottomView).offset(8);
+        make.left.equalTo(introduceBtn.mas_right).offset(8);
+        make.height.mas_equalTo(100);
+        make.right.equalTo(_bottomView.mas_right).offset(-8);
+    }];
+    
+    UILabel *malfunctionLab = [[UILabel alloc] init];
+    malfunctionLab.text = @"常见故障";
+    malfunctionLab.textAlignment = NSTextAlignmentCenter;
+    malfunctionLab.font = [UIFont systemFontOfSize:20];
+    malfunctionLab.textColor = [UIColor whiteColor];
+    [malfunctionBtn addSubview:malfunctionLab];
+    [malfunctionLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.centerY.equalTo(malfunctionBtn);
+        make.left.equalTo(malfunctionBtn).offset(20);
+        make.height.mas_equalTo(20);
+    }];
+    
+    // 用车常识
+    UIButton *commonSenseBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [commonSenseBtn setBackgroundImage:[UIImage imageNamed:@"carDoctorColumn_car"] forState:UIControlStateNormal];
+    commonSenseBtn.tag = BASE_CARDOCTOR_TAG + 4; // 用车常识
+    [commonSenseBtn addTarget:self action:@selector(bottomBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_bottomView addSubview:commonSenseBtn];
+    [commonSenseBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(malfunctionBtn.mas_bottom).offset(8);
+        make.left.equalTo(introduceBtn.mas_right).offset(8);
+        make.height.mas_equalTo(100);
+        make.right.equalTo(_bottomView.mas_right).offset(-8);
+    }];
+    
+    UILabel *commonSenseLab = [[UILabel alloc] init];
+    commonSenseLab.text = @"用车常识";
+    commonSenseLab.textAlignment = NSTextAlignmentCenter;
+    commonSenseLab.font = [UIFont systemFontOfSize:20];
+    commonSenseLab.textColor = [UIColor whiteColor];
+    [commonSenseBtn addSubview:commonSenseLab];
+    [commonSenseLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.centerY.equalTo(commonSenseBtn);
+        make.right.equalTo(malfunctionBtn).offset(-20);
+        make.height.mas_equalTo(20);
+    }];
+    
+    
+    // 问题板
+    UIButton *questionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    questionBtn.backgroundColor = [UIColor orangeColor];
+    [questionBtn setBackgroundImage:[UIImage imageNamed:@"carDoctorColumn_wenti"] forState:UIControlStateNormal];
+    questionBtn.tag = BASE_CARDOCTOR_TAG + 5; // 问题板
+    [questionBtn addTarget:self action:@selector(bottomBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [_bottomView addSubview:questionBtn];
+    [questionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(introduceBtn.mas_bottom).offset(8);
+        make.left.equalTo(_bottomView).offset(8);
+        make.height.mas_equalTo(100);
+        make.right.equalTo(_bottomView.mas_right).offset(-8);
+    }];
+    
+    UILabel *questionLab = [[UILabel alloc] init];
+    questionLab.text = @"问题板";
+    questionLab.textAlignment = NSTextAlignmentCenter;
+    questionLab.font = [UIFont systemFontOfSize:20];
+    questionLab.textColor = [UIColor whiteColor];
+    [questionBtn addSubview:questionLab];
+    [questionLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.centerY.equalTo(questionBtn);
+        make.right.mas_equalTo( - SCREEN_WHIDTH / 2);
+        make.height.mas_equalTo(20);
+    }];
+    
+}
+
+-(void)bottomBtnClick:(UIButton *)sender {
+    switch (sender.tag) {
+        case BASE_CARDOCTOR_TAG + 2:
+        {
+            NSLog(@"车大夫介绍");
+            CarDoctorDetailViewController *vc = [[CarDoctorDetailViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case BASE_CARDOCTOR_TAG + 3:
+        {
+            NSLog(@"常见故障");
+            break;
+        }
+        case BASE_CARDOCTOR_TAG + 4:
+        {
+            NSLog(@"用车常识");
+            break;
+        }
+        case BASE_CARDOCTOR_TAG + 5:
+        {
+            NSLog(@"问题板");
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,5 +279,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

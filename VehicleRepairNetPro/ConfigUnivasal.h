@@ -18,10 +18,15 @@
 #define BASE_WEIQUAN_TAG 40000 //维权
 #define BASE_MY_TAG 50000 //我的
 #define BASE_CARDOCTOR_TAG 31000 // 车大夫
+#define BASE_CARDOCTORDETAIL_TAG 31100 //车大夫二级页面
 
 // 屏幕
 #define SCREEN_WHIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define SCREENHEIGHT (IS_IOS7 ? [UIScreen mainScreen].bounds.size.height : [UIScreen mainScreen].bounds.size.height - 20)
+
+#define IS_IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? YES : NO)
 
 @interface ConfigUnivasal : NSObject
 

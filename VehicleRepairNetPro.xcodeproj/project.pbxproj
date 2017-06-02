@@ -25,6 +25,9 @@
 		8C273C4F1ED66C77002E0DB4 /* GetEnterpriseInfoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C273C4E1ED66C77002E0DB4 /* GetEnterpriseInfoList.m */; };
 		8C273C521ED67893002E0DB4 /* GetHomePageCenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C273C511ED67893002E0DB4 /* GetHomePageCenterModel.m */; };
 		8C273C591ED6B304002E0DB4 /* CarouselDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C273C581ED6B304002E0DB4 /* CarouselDetailViewController.m */; };
+		8C2B93271EE107DD007422B1 /* CarDoctorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B93261EE107DD007422B1 /* CarDoctorModel.m */; };
+		8C2B932A1EE11299007422B1 /* VRNETBLL+CarDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B93291EE11299007422B1 /* VRNETBLL+CarDoctor.m */; };
+		8C2B932D1EE13FCE007422B1 /* CarDoctorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2B932C1EE13FCE007422B1 /* CarDoctorDetailViewController.m */; };
 		8C2C23411EA8556300D96B6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23401EA8556300D96B6F /* main.m */; };
 		8C2C23441EA8556300D96B6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23431EA8556300D96B6F /* AppDelegate.m */; };
 		8C2C23471EA8556300D96B6F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2C23461EA8556300D96B6F /* ViewController.m */; };
@@ -116,6 +119,12 @@
 		8C273C511ED67893002E0DB4 /* GetHomePageCenterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetHomePageCenterModel.m; sourceTree = "<group>"; };
 		8C273C571ED6B304002E0DB4 /* CarouselDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouselDetailViewController.h; sourceTree = "<group>"; };
 		8C273C581ED6B304002E0DB4 /* CarouselDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouselDetailViewController.m; sourceTree = "<group>"; };
+		8C2B93251EE107DD007422B1 /* CarDoctorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDoctorModel.h; sourceTree = "<group>"; };
+		8C2B93261EE107DD007422B1 /* CarDoctorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDoctorModel.m; sourceTree = "<group>"; };
+		8C2B93281EE11299007422B1 /* VRNETBLL+CarDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VRNETBLL+CarDoctor.h"; sourceTree = "<group>"; };
+		8C2B93291EE11299007422B1 /* VRNETBLL+CarDoctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VRNETBLL+CarDoctor.m"; sourceTree = "<group>"; };
+		8C2B932B1EE13FCE007422B1 /* CarDoctorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDoctorDetailViewController.h; sourceTree = "<group>"; };
+		8C2B932C1EE13FCE007422B1 /* CarDoctorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarDoctorDetailViewController.m; sourceTree = "<group>"; };
 		8C2C233C1EA8556300D96B6F /* VehicleRepairNetPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VehicleRepairNetPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2C23401EA8556300D96B6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C2C23421EA8556300D96B6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -336,6 +345,24 @@
 			name = "轮播图详情";
 			sourceTree = "<group>";
 		};
+		8C2B93241EE10755007422B1 /* carDoctor */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B93251EE107DD007422B1 /* CarDoctorModel.h */,
+				8C2B93261EE107DD007422B1 /* CarDoctorModel.m */,
+			);
+			name = carDoctor;
+			sourceTree = "<group>";
+		};
+		8C2B932E1EE15EA4007422B1 /* 组织结构 */ = {
+			isa = PBXGroup;
+			children = (
+				8C2B932B1EE13FCE007422B1 /* CarDoctorDetailViewController.h */,
+				8C2B932C1EE13FCE007422B1 /* CarDoctorDetailViewController.m */,
+			);
+			name = "组织结构";
+			sourceTree = "<group>";
+		};
 		8C2C23331EA8556300D96B6F = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +494,7 @@
 			children = (
 				8C4598781ED91408006E04A3 /* CarDoctorViewController.h */,
 				8C4598791ED91408006E04A3 /* CarDoctorViewController.m */,
+				8C2B932E1EE15EA4007422B1 /* 组织结构 */,
 			);
 			name = "车大夫";
 			sourceTree = "<group>";
@@ -485,9 +513,10 @@
 		8C48F6DB1EB2D9B0006B4932 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8C273C431ED668B1002E0DB4 /* homePageMode */,
 				8C48F6E01EB316BF006B4932 /* CommonReturnModel.h */,
 				8C48F6E11EB316BF006B4932 /* CommonReturnModel.m */,
+				8C2B93241EE10755007422B1 /* carDoctor */,
+				8C273C431ED668B1002E0DB4 /* homePageMode */,
 				8C48F6EC1EB3370B006B4932 /* enterpriseModel */,
 			);
 			name = Model;
@@ -503,6 +532,8 @@
 				8C48F6E71EB3242A006B4932 /* VRNETBLL+Enterprise.m */,
 				8C273C401ED6639A002E0DB4 /* VRNETBLL+HomePage.h */,
 				8C273C411ED6639A002E0DB4 /* VRNETBLL+HomePage.m */,
+				8C2B93281EE11299007422B1 /* VRNETBLL+CarDoctor.h */,
+				8C2B93291EE11299007422B1 /* VRNETBLL+CarDoctor.m */,
 			);
 			name = BLL;
 			sourceTree = "<group>";
@@ -839,8 +870,10 @@
 				8C2C23411EA8556300D96B6F /* main.m in Sources */,
 				8C48F6E21EB316BF006B4932 /* CommonReturnModel.m in Sources */,
 				8C1312781EA99F400052CC89 /* MyCenterViewController.m in Sources */,
+				8C2B93271EE107DD007422B1 /* CarDoctorModel.m in Sources */,
 				8C45987B1ED91408006E04A3 /* CarDoctorViewController.m in Sources */,
 				8CF79F4A1EC16A6300BB4EC1 /* CompanyQueryView.m in Sources */,
+				8C2B932D1EE13FCE007422B1 /* CarDoctorDetailViewController.m in Sources */,
 				8C1312801EA9DE530052CC89 /* ConfigUnivasal.m in Sources */,
 				8C4598811ED97AED006E04A3 /* CallQQAndTelephone.m in Sources */,
 				8C3DAC671EBC55FB00364CE0 /* EnterpriseAbstractTableViewCell.m in Sources */,
@@ -851,6 +884,7 @@
 				8C0B70A71ED42E0600CB323A /* UIView+Frame.m in Sources */,
 				8C48F6EB1EB336FF006B4932 /* GetEnterpriseListModel.m in Sources */,
 				8C273C521ED67893002E0DB4 /* GetHomePageCenterModel.m in Sources */,
+				8C2B932A1EE11299007422B1 /* VRNETBLL+CarDoctor.m in Sources */,
 				8C9E661E1EB9DAF4004F2401 /* GetEnterpriseDetailModel.m in Sources */,
 				8C2C237B1EA861B600D96B6F /* BaseTableViewController.m in Sources */,
 				8C3DAC601EBC1D6900364CE0 /* EnterpriseDetailTableViewCell.m in Sources */,
@@ -1007,7 +1041,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VehicleRepairNetPro/PrefixHeader.pch";
 				INFOPLIST_FILE = VehicleRepairNetPro/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xingtongBeidou.VehicleRepairNetPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1023,7 +1057,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VehicleRepairNetPro/PrefixHeader.pch";
 				INFOPLIST_FILE = VehicleRepairNetPro/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xingtongBeidou.VehicleRepairNetPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";

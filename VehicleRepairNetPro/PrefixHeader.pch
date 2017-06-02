@@ -25,4 +25,8 @@
 #define getEnterpriseDetail_URL @"app/enterprise/getEnterpriseDetail" // 企业详情
 #define getHomePage_URL @"app/homePage/index"  // 首页中轮播图、购买配件、企业之窗 接口
 
+//车大夫专栏接口
+#define getCarDoctorStructure_URL @"app/article/getList"  // 组织结构
+
+
 #endif /* PrefixHeader_pch */
