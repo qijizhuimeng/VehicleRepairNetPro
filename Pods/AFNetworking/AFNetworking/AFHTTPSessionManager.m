@@ -301,7 +301,6 @@
                 NSLog(@"入参：%@",requestJsonStr);
                 NSLog(@"回参：%@",responseJsonStr);
                 success(dataTask, responseObject);
-                success(dataTask, responseObject);
             }
         }
     }];

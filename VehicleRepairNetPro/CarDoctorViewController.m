@@ -8,8 +8,8 @@
 
 #import "CarDoctorViewController.h"
 #import "CallQQAndTelephone.h"
-//#import "VRNETBLL+CarDoctor.h"
 #import "CarDoctorDetailViewController.h"
+#import "CommonFaultsViewController.h"
 
 #define btnWitdtHeight (SCREEN_WHIDTH - 50 - 60)/3
 #define btnBaseWidth (SCREEN_WHIDTH - 24) / 5
@@ -29,9 +29,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"车大夫专栏";
+    
+    [self judgmentIdentity];
+    
     [self makeScrollView];
     [self makeTopView];
     [self makeBottomView];
+    
+}
+
+-(void)judgmentIdentity {
+    NSString *role = [UserModel shareInstanced].role;
+    if ([role isEqualToString:@"1"]) {
+        NSLog(@"车大夫身份登录");
+    }else {
+        NSLog(@"普通用户身份登录");
+    }
+    
 }
 
 -(void)makeScrollView {
@@ -241,18 +255,23 @@
         {
             NSLog(@"车大夫介绍");
             CarDoctorDetailViewController *vc = [[CarDoctorDetailViewController alloc] init];
-            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case BASE_CARDOCTOR_TAG + 3:
         {
             NSLog(@"常见故障");
+            CommonFaultsViewController *vc = [[CommonFaultsViewController alloc] initWithStyle:UITableViewStylePlain];
+            vc.columnType = CommonFaults;
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case BASE_CARDOCTOR_TAG + 4:
         {
             NSLog(@"用车常识");
+            CommonFaultsViewController *vc = [[CommonFaultsViewController alloc] initWithStyle:UITableViewStylePlain];
+            vc.columnType = Commonsense;
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case BASE_CARDOCTOR_TAG + 5:

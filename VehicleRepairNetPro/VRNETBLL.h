@@ -15,6 +15,8 @@
 #import "GetEnterpriseDetailModel.h"
 #import "HomePageModel.h"
 #import "CarDoctorModel.h"
+#import "CommonFaultsModel.h"
+#import "CarDoctorDetailModel.h"
 
 @interface VRNETBLL : NSObject
 

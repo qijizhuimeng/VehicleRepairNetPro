@@ -39,6 +39,7 @@
                 }
                 NSArray *arr = [GetEnterpriseListDataInfoModel arrayInfoModelWithInfoArr:self.listModel.dataModel.info];
                 [self.mArr addObjectsFromArray:arr];
+                [self.tableView reloadData];
                 
                 self.currentPage = [NSString stringWithFormat:@"%ld",[currentPage integerValue] + 1];
                 
@@ -51,7 +52,7 @@
             }else {
                 [self showMessage:self.listModel.msg];
             }
-            [self.tableView reloadData];
+            
         }else {
             [self showError:error];
         }

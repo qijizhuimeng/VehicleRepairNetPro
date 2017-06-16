@@ -205,9 +205,9 @@
         case BASE_HOMEPAGE_TAG:{
             NSLog(@"车大夫专栏");
             CarDoctorViewController *carDoctorVC = [[CarDoctorViewController alloc] init];
-            self.hidesBottomBarWhenPushed = YES;
+            carDoctorVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:carDoctorVC animated:YES];
-            self.hidesBottomBarWhenPushed = NO;
+            
             break;
         }
         case BASE_HOMEPAGE_TAG + 1:

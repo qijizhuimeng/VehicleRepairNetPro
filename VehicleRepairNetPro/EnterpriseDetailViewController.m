@@ -29,34 +29,12 @@
 
 @implementation EnterpriseDetailViewController
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self getEnterpriseDetailWithEnterpriseId:self.enterpriseId];
-}
-
--(instancetype)init {
-    if (self == [super init]) {
-        self.navigationItem.title = @"企业基本信息";
-        self.hidesBottomBarWhenPushed = YES;
-        
-    }
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    [self createView];
-}
-
 -(void)getEnterpriseDetailWithEnterpriseId:(NSString *)enterpriseId {
     [VRNETBLL getEnterpriseDetailWithId:enterpriseId Block:^(GetEnterpriseDetailModel *detailModel, NSError *error) {
         if (!error) {
             self.detailModel = detailModel;
             if ([detailModel.status isEqualToString:@"0"]) {
-//                NSLog(@"%@",self.detailModel.infoModel.telephone);
+                //                NSLog(@"%@",self.detailModel.infoModel.telephone);
                 self.tableView.tableHeaderView = [self tableviewHeader];
                 [self loadData];
                 [self.tableView reloadData];
@@ -67,6 +45,31 @@
             [self showError:error];
         }
     }];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self getEnterpriseDetailWithEnterpriseId:self.enterpriseId];
+}
+
+-(instancetype)init {
+    if (self == [super init]) {
+        self.navigationItem.title = @"企业基本信息";
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self createView];
+    [self makeAppointmentFavorableButton];
+}
+
+-(void)makeAppointmentFavorableButton {
+    
 }
 
 -(void)loadData {
@@ -190,6 +193,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 #pragma mark TableView 协议方法
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -11,6 +11,8 @@
 #import "AppDelegate.h"
 //#import "CGRectMakeCustom.h"
 
+#define SUCCESS_STATUS @"0" // 成功
+
 // Tag BASE
 #define BASE_KEFU_TAG 10000 //客服
 #define BASE_ENTERPRISE_TAG 20000 //企业查询

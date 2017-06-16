@@ -16,6 +16,7 @@
 #import <Masonry.h>
 #import "UIView+EXT.h"
 #import "UIView+Frame.h"
+#import "UserModel.h"
 
 // 服务器 地址
 #define BASE_URL @"http://www.yzqcwx.com/" // 外网
@@ -26,7 +27,8 @@
 #define getHomePage_URL @"app/homePage/index"  // 首页中轮播图、购买配件、企业之窗 接口
 
 //车大夫专栏接口
-#define getCarDoctorStructure_URL @"app/article/getList"  // 组织结构
-
+#define getCarDoctorStructure_URL @"app/article/getList"  // 组织结构 // 常见故障
+//#define getCommonFaults_URL @"app/article/getList"  // 常见故障
+#define getCarDoctorDetail_URL @"app/article/getDetail"
 
 #endif /* PrefixHeader_pch */

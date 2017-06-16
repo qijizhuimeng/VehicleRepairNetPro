@@ -8,6 +8,8 @@
 
 #import "CarDoctorDetailViewController.h"
 #import "VRNETBLL+CarDoctor.m"
+#import "WebViewController.h"
+
 
 @interface CarDoctorCustomButton : UIButton
 
@@ -64,18 +66,13 @@
 
 @implementation CarDoctorDetailViewController
 
-// 组织架构网络请求
--(void)requestCarCoctorStructureWithParameter:(NSDictionary *)parameter {
-    [VRNETBLL getCarDoctorModleWithParameter:parameter Block:^(CarDoctorModel *model, NSError *error) {
-        self.carDoctorModel = model;
-    }];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.title = @"车大夫介绍";
     self.view.backgroundColor = getColor(@"f2f2f2");
     [self makeView];
+    
 }
 
 -(void)makeView {
@@ -136,24 +133,30 @@
     switch (sender.tag) {
         case BASE_CARDOCTORDETAIL_TAG:{
             NSLog(@"组织结构");
-            NSDictionary *parameter = @{@"type" : @"23",
-              @"currentNum" : @"10",
-              @"currentPage" : @"0"
-                                        };
-            [self requestCarCoctorStructureWithParameter:parameter];
-            
+            WebViewController *webController = [[WebViewController alloc] init];
+            webController.webViewType = WebViewTypePrevent;
+            [self.navigationController pushViewController:webController animated:YES];
             break;
         }
         case BASE_CARDOCTORDETAIL_TAG + 1:{
             NSLog(@"管理方法");
+            WebViewController *webController = [[WebViewController alloc] init];
+            webController.webViewType = WebViewTypeManageWay;
+            [self.navigationController pushViewController:webController animated:YES];
             break;
         }
         case BASE_CARDOCTORDETAIL_TAG + 2:{
             NSLog(@"服务章程");
+            WebViewController *webController = [[WebViewController alloc] init];
+            webController.webViewType = WebViewTypeServeRules;
+            [self.navigationController pushViewController:webController animated:YES];
             break;
         }
         case BASE_CARDOCTORDETAIL_TAG + 3:{
             NSLog(@"实体店关联");
+            WebViewController *webController = [[WebViewController alloc] init];
+            webController.webViewType = WebViewTypePleasantNotice;
+            [self.navigationController pushViewController:webController animated:YES];
             break;
         }
         default:
